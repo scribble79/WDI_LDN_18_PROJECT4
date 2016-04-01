@@ -1,0 +1,24 @@
+{
+  "name": "project4",
+  "description": "Bermondsey and Rotherhithe Locality Children's Centres website",
+  "main": "app.js",
+  "authors": [
+    "Snita Bharth <snitabharth@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/scribble79/WDI_LDN_18_PROJECT4",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-bootstrap": "^1.2.5",
+    "angular-animate": "^1.5.3"
+  }
+}

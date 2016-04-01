@@ -1,0 +1,25 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "Bermondsey and Rotherhithe Locality Children's Centres website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scribble79/WDI_LDN_18_PROJECT4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scribble79/WDI_LDN_18_PROJECT4/issues"
+  },
+  "homepage": "https://github.com/scribble79/WDI_LDN_18_PROJECT4#readme",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.10",
+    "morgan": "^1.7.0"
+  }
+}

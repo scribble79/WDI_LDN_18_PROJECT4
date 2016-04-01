@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="ChildrensCenters">
+<head>
+  <title>Children's Centre's</title>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxM36DxD-TmmCuWMML0UXBVSirOUkF42Q"></script>
+  <script src="/vendor/angular/angular.min.js"></script>
+  <script src="/vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="/vendor/angular-animate/angular-animate.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/controllers/navBarController.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+-->
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+  <nav ng-controller="navBarController as nav" class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="/images/Southwarklogo.png" width="90px">
+        </a>
+        <ul class="nav navbar-nav navbar-right">
+          <span class="dropdown" uib-dropdown on-toggle="toggled(open)">
+            <a href id="simple-dropdown" uib-dropdown-toggle>
+              Children's Centres
+            </a>
+            <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+            <li ng-repeat="item in nav.items">
+                <a href>{{item}}</a>
+              </li>
+            </ul>
+          </span>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+
+
+  <h1>Bermondsey and Rotherhite Locality </h1>
+  <h1>Children's Centres</h1>
+
+
+
+  <ul>
+    <li><a href="#InformationForFamilies">Information For Families</a></li>
+    <li><a href="#KintoreWay">Kintore Way</a></li>
+    <li><a href="#PilgrimsWay">Pilgrims Way</a></li>
+    <li><a href="#SouthBermondsey">South Bermondsey</a></li>
+    <li><a href="#Rotherhite">Rotherhite</a></li>
+  </ul>
+
+</body>
+</html>
