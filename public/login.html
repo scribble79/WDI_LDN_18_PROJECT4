@@ -1,0 +1,13 @@
+<h1>LOGIN</h1>
+
+<section id="login">
+  <h3>Login</h3>
+    <form ng-submit="admins.login()" novalidate>
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="Email" ng-model="admins.currentAdmin.email">
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Password" ng-model="admins.currentAdmin.password">
+
+      <input type="submit" value="Login" class="btn btn-default">  
+    </form>    
+</section>

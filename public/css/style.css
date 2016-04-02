@@ -24,3 +24,15 @@ img {
 div.navbar-header {
   width: 100%;
 }
+
+[ticker] .minus-margin-top {
+  margin-top:-60px;
+  list-style: none;
+}
+
+@media (min-width:768px) {
+  [ticker] .minus-margin-top {
+    margin-top:-30px;
+    list-style: none;
+  }
+}

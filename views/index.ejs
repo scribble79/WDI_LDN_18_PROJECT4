@@ -5,11 +5,24 @@
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxM36DxD-TmmCuWMML0UXBVSirOUkF42Q"></script>
   <script src="/vendor/angular/angular.min.js"></script>
+  <script src="/vendor/angular-resource/angular-resource.min.js"></script>
+  <script src="/vendor/angular-jwt/dist/angular-jwt.min.js"></script>
+  <script src="/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="/vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
   <script src="/vendor/angular-animate/angular-animate.min.js"></script>
+  <script src="/vendor/angular-ticker/release/ticker.js"></script>
+
   <script src="/js/app.js"></script>
   <script src="/js/controllers/navBarController.js"></script>
-
+  <script src="/js/controllers/tickerController.js"></script>
+  <script src="/js/controllers/adminsController.js"></script>
+  <script src="/js/controllers/centersController.js"></script>
+  <script src="/js/controllers/eventsController.js"></script>
+  <script src="/js/models/admin.js"></script>
+  <script src="/js/models/center.js"></script>
+  <script src="/js/models/event.js"></script>
+  <script src="/js/services/token.js"></script>
+  <script src="/js/services/authInterceptor.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <!-- 
@@ -19,12 +32,14 @@
 
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 
+<link rel="stylesheet" href="/vendor/angular-ticker/release/ticker.css">
+
 </head>
-<body>
+<body ng-controller="adminsController as admins">
   <nav ng-controller="navBarController as nav" class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" ui-sref="home">
           <img alt="Brand" src="/images/Southwarklogo.png" width="90px">
         </a>
         <ul class="nav navbar-nav navbar-right">
@@ -47,14 +62,13 @@
   <h1>Bermondsey and Rotherhite Locality </h1>
   <h1>Children's Centres</h1>
 
+  <main ui-view></main>
 
 
-  <ul>
-    <li><a href="#InformationForFamilies">Information For Families</a></li>
-    <li><a href="#KintoreWay">Kintore Way</a></li>
-    <li><a href="#PilgrimsWay">Pilgrims Way</a></li>
-    <li><a href="#SouthBermondsey">South Bermondsey</a></li>
-    <li><a href="#Rotherhite">Rotherhite</a></li>
+  <ul ng-controller="tickerController as tickerCtl" ticker timing="2500">
+    <li ng-repeat="item in tickerCtl.myTickerItems">
+      {{item.title}} - {{item.copy}}
+    </li>
   </ul>
 
 </body>
