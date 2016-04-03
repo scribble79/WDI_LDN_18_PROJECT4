@@ -7,13 +7,25 @@ function navBarController() {
   console.log("Loaded")
   var self = this;
 
-  self.items = [
-    'Home',
-    'Information For Families',
-    'Kintore Way',
-    'Pilgrims Way',
-    'South Bermondsey',
-    'Rotherhite'
+  self.items = [{
+    name: 'Home',
+    url: ""
+  },{
+    name: 'Information For Families',
+    url: ""
+  },{
+    name: 'Kintore Way',
+    url: "http://www.kintoreway.com/page_viewer.asp?page=Home&pid=1"
+  },{
+    name: 'Pilgrims Way',
+    url: "http://www.pilgrimswayprimary.co.uk/"
+  },{
+    name: 'South Bermondsey',
+    url: "http://www.pilgrimswayprimary.co.uk/ccsb/"
+  },{
+    name: 'Rotherhite',
+    url: "http://rotherhitheprimary.co.uk/childrens-centre/"
+  }
   ]
 
   self.status = {
