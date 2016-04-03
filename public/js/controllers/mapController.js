@@ -3,11 +3,10 @@ angular.module('ChildrensCenters')
   .directive('map', Gmap);
 
   function MapController() {
-    this.mapCenter = { lat: 51.4834, lng: -0.0821 };
+    this.mapCenter = { lat: 51.480484, lng: -0.055939 };
     this.mapMarkers =[{
     name: "Pilgrim's Way Primary School",
     position: { lat: 51.480484, lng: -0.055939 },
-    zoom: { lat: 51.4834, lng: -0.0821 }
   }
   ]
 }
@@ -18,7 +17,6 @@ function Gmap() {
     replace: true,
     template: '<div class="google-map"></div>',
     scope: {
-      zoom: '=',
       center: '=',
       markers: '='
     },
@@ -27,7 +25,7 @@ function Gmap() {
       if(!scope.center) throw new Error("You must provide a center for your map directive");
        var map = new google.maps.Map($element[0], {
         center: scope.center,
-        zoom: 10
+        zoom: 15
       });
 
        if(scope.markers) {
