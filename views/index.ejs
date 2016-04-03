@@ -69,7 +69,7 @@
   <main ui-view></main>
 
 
-  <ul ng-controller="tickerController as tickerCtl" ticker timing="2500">
+  <ul ng-controller="tickerController as tickerCtl" ticker timing="2500" class="ticker">
     <li ng-repeat="item in tickerCtl.myTickerItems">
       {{item.title}} - {{item.copy}}
     </li>

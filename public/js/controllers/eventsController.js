@@ -29,6 +29,7 @@ function EventsController() {
 
 
   function updateEvent(event) {
+    return
     self.patch(Event._id, Event)
     .then(function(res) {
       Event.isEditing = false;
@@ -40,6 +41,7 @@ function EventsController() {
 
 
   function deleteEvent(event) {
+    return
     self.delete("events/" + event._id)
     .then(function() {
       self.all = self.all.filter(function(_event) {
@@ -53,6 +55,7 @@ function EventsController() {
   }
 
   function addEvent(){
+    return
     self.post("events/", { event: self.newEvent })
     .then(function() {
       self.all.push(self.newEvent);

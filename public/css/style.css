@@ -26,7 +26,14 @@ div.navbar-header {
   width: 100%;
 }
 
-[ticker] .minus-margin-top {
+/*.ticker {
+  height: 250px;
+  list-style: none;
+  z-index: 3;
+  display: inline-block;
+}*/
+
+.ticker .minus-margin-top {
   margin-top:-60px;
   list-style: none;
   text-decoration: none;
@@ -50,4 +57,24 @@ div {
   width: 70%;
   height: 100vh;
   border-radius: 15px;
+}
+
+.am {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
+}
+
+.pm {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
 }

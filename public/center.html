@@ -3,12 +3,38 @@
 <section ng-controller="eventsController as events">
   <h3>Timetable</h3>
 
+  <div id="containerAM">
+    <h3>AM</h3>
+      <div id="square1" class="am">Monday<p>Child Development Work- shop linking to EYFS Start date: 16th May 2016 7 Week course 9:30am—12:30pm
+Venue:
+South Bermondsey CC
+Fitness, Fun, Music 10am-11am
+Venue: St Phillips Church SE1 5PD
+Dance, Dance, Dance, parents/carers and children together.
+No booking required
+Book Start
+10.15am-11.45am
+Venue:
+Blue Anchor Library
+(See Special Events)
+A Fun drop-in playgroup session for families. You can also join the library and borrow books!</p></div>
+      <div id="square2" class="am">Tuesday</div>
+      <div id="square3" class="am">Wednesday</div>
+      <div id="square4" class="am">Thursday</div>
+      <div id="square5" class="am">Friday</div>
+  </div>
+
+  <div id="containerPM">
+    <h3>PM</h3>
+      <div id="square6" class="pm">after</div>
+      <div id="square7" class="pm">school</div>
+      <div id="square8" class="pm">club</div>
+      <div id="square9" class="pm">all</div>
+      <div id="square10" class="pm">welcome</div>
+  </div>
   
   <ul>
-
     <li ng-repeat="event in events.all | orderBy: start" class="col-md-4">
-
-
       <form ng-if="event.isEditing" ng-submit="events.updateevent(event)">
         <input type="text" name="name" placeholder="Name" ng-model="event.name">
         <input type="text" name="date" placeholder="Date" ng-model="event.date">
@@ -53,7 +79,7 @@
   </form>
 
   <div ng-controller="MapController as map">
-    <map center="map.mapCenter" markers="map.mapMarkers">
+    <map center="map.mapCenter" markers="map.mapMarkers" infoWindow="map.mapInfoWindow.show" ng-click="map.openInfoWindow">
       
   </map>
   </div>
