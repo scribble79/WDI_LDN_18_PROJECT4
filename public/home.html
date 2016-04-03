@@ -1,5 +1,5 @@
-<h1>HOME</h1>
-
+<h1>Bermondsey and Rotherhite Locality </h1>
+<h1>Children's Centres</h1>
 
 <ul>
   <li><a ui-sref="info">Information For Families</a></li>
@@ -12,7 +12,7 @@
 
 
 <ul>
-  <li><a href="#login">Login</a></li>
-  <li><a href="#register">Register</a></li>
-  <li><a href="#logout" ng-click="admins.logout()">Logout</a></li>
+  <li ng-hide="admins.isLoggedIn()"><a href="#login">Login</a></li>
+  <li ng-hide="admins.isLoggedIn()"><a href="#register">Register</a></li>
+  <li ng-show="admins.isLoggedIn()"><a href="#logout" ng-click="admins.logout()">Logout</a></li>
 </ul>

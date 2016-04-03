@@ -4,5 +4,8 @@ angular
 
 CentersController.$inject = ['Center']
 function CentersController() {
+  console.log("Loaded")
+  var self = this;
+
 
 }

@@ -36,3 +36,12 @@ div.navbar-header {
     list-style: none;
   }
 }
+
+div {
+  margin: 0;
+}
+
+.google-map {
+  width: 100%;
+  height: 100vh;
+}

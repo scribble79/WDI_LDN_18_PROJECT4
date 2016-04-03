@@ -2,8 +2,8 @@ angular
   .module('ChildrensCenters')
   .controller("adminsController", AdminsController);
 
-AdminsController.$inject = ['Admin', 'tokenService']
-function AdminsController(Admin, tokenService) {
+AdminsController.$inject = ['Admin', 'tokenService', '$state']
+function AdminsController(Admin, tokenService, $state) {
   var self = this;
 
   self.all = [];
@@ -18,6 +18,9 @@ function AdminsController(Admin, tokenService) {
     }
 
     self.message = res.message;
+
+    // go to center state
+    $state.go('center');
   }
 
   self.login = function() {
@@ -38,6 +41,7 @@ function AdminsController(Admin, tokenService) {
   self.isLoggedIn = function() {
     return !!tokenService.getToken();
   }
+
 
   return self;
 }

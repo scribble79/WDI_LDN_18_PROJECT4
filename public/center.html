@@ -1,1 +1,61 @@
 <h1>CENTER</h1>
+
+<section ng-controller="eventsController as events">
+  <h3>Timetable</h3>
+
+  
+  <ul>
+
+    <li ng-repeat="event in events.all | orderBy: start" class="col-md-4">
+
+
+      <form ng-if="event.isEditing" ng-submit="events.updateevent(event)">
+        <input type="text" name="name" placeholder="Name" ng-model="event.name">
+        <input type="text" name="date" placeholder="Date" ng-model="event.date">
+        <input type="text" name="content" placeholder="Content" ng-model="event.content">
+        <input type="text" name="image" placeholder="Image" ng-model="event.image">
+        <button ng-click="event.isEditing=false" class="btn btn-default">Update</button>
+      </form>
+
+      <div ng-if="!event.isEditing">
+        <strong>{{event.name}}</strong><br><em>{{event.date}}</br><br><a>{{event.content}}</a></br><br><a>{{event.image}}</a></br></em>
+        <button ng-click="event.isEditing=true" class="btn btn-default">Edit</button>
+        <button ng-click="events.deleteevent(event)" class="btn btn-default">Delete</button>
+      </div>
+    </li>
+  </ul>
+
+
+  <form class="add-event" ng-submit='Events.addevent()' class="form-group">
+    <div>
+      <label for="new-event-name"></label>
+      <input class="form-control" type="text" id="new-event-name" placeholder="Name" ng-model='events.newEvent.name'>
+    </div>
+
+    <div>
+      <label for="new-event-date"></label>
+      <input class="form-control" type="text" id="new-event-date" placeholder="Date" ng-model='events.newEvent.date'>
+    </div>
+
+    <div>
+      <label for="new-event-content"></label>
+      <input class="form-control" type="text" id="new-event-content" placeholder="Content" ng-model='events.newEvent.content'>
+    </div>
+
+    <div>
+      <label for="new-event-image"></label>
+      <input class="form-control" type="text" id="new-event-image" placeholder="Image" ng-model='events.newEvent.image'>
+    </div>
+
+    <div>
+      <input type="submit" class="btn btn-default" value="Add event">
+    </div>
+  </form>
+
+  <div ng-controller="MapController as map">
+    <map center="map.mapCenter" markers="map.mapMarkers">
+      
+  </map>
+  </div>
+
+</section>
