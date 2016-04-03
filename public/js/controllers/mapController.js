@@ -3,14 +3,13 @@ angular.module('ChildrensCenters')
   .directive('map', Gmap);
 
   function MapController() {
-    this.mapCenter = { lat: 51.4802, lng: -0.0193 };
+    this.mapCenter = { lat: 51.4834, lng: -0.0821 };
     this.mapMarkers =[{
-    name: "Buckingham Palace",
-    position: { lat: 51.501364, lng: -0.14189 }
-  },{
-    name: "Emirates Stadium",
-    position: { lat: 51.5548918, lng: -0.1106267 }
-  }]
+    name: "Pilgrim's Way Primary School",
+    position: { lat: 51.480484, lng: -0.055939 },
+    zoom: { lat: 51.4834, lng: -0.0821 }
+  }
+  ]
 }
 
 function Gmap() {
@@ -19,6 +18,7 @@ function Gmap() {
     replace: true,
     template: '<div class="google-map"></div>',
     scope: {
+      zoom: '=',
       center: '=',
       markers: '='
     },
@@ -34,8 +34,8 @@ function Gmap() {
         scope.markers.forEach(function(marker) {
           new google.maps.Marker({
             position: marker.position,
-            map: map,
-            animation: google.maps.Animation.BOUNCE
+            map: map
+            // animation: google.maps.Animation.BOUNCE
           });
         });
       }

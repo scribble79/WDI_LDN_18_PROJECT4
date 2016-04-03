@@ -14,7 +14,7 @@ function EventsController() {
   this.deleteEvent = deleteEvent;
 
   function getEvents() {
-    return
+    return 
     self.get()
     .then(function(res) {
       console.log(res)
