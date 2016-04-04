@@ -41,6 +41,7 @@ function Gmap() {
           });
 
           var infowindow = new google.maps.InfoWindow({
+            infowindow: '<div class="infowindowSize">',
             content: '<div class="info-window">' + marker.name + ", " + marker.address1 + marker.contact + '</div>'
           });
 

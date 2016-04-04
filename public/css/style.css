@@ -4,7 +4,7 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 70px;
 }
 
 img {
@@ -24,11 +24,6 @@ img {
 
 div.navbar-header {
   width: 100%;
-}
-
-.external {
-  list-style: none;
-  display: inline-block;
 }
 
 /*.ticker {
@@ -65,13 +60,15 @@ div {
   border-radius: 15px;
 }
 
-. info-window {
-  width: 20%;
-  height: 100vh;
-  border-radius: 15px;
+.info-window {
+  width: 30%;
 }
 
-.am {
+.infowindowSize {
+  width: 70%
+}
+
+/*.am {
   display: inline-block;
   text-align: center;
   margin: 0 auto;
@@ -89,65 +86,9 @@ div {
   padding: 2px;
   width: 250px;
   height: 350px;
-}
-
-/*.mon {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid black;
-  padding: 2px;
-  width: 250px;
-  height: 300px;
-}
-
-.tue {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid black;
-  padding: 2px;
-  width: 250px;
-  height: 300px;
-}
-
-.wed {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid black;
-  padding: 2px;
-  width: 250px;
-  height: 300px;
-}
-
-.thur {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid black;
-  padding: 2px;
-  width: 250px;
-  height: 300px;
-}
-
-.fri {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid black;
-  padding: 2px;
-  width: 250px;
-  height: 300px;
-}
-
-#square1 {
-  display: inline-block;
-}
-
-#square2 {
-  display: inline-block;
 }*/
+
+
 
 /* TABLE */
 
