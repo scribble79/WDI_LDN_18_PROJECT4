@@ -3,98 +3,28 @@
 <section ng-controller="eventsController as events">
   <h3>Timetable</h3>
 
-  <div id="containerAM">
-    <h3>AM</h3>
-      <div id="square1" class="am"><h4>Monday</h4><p></p></div>
-      <div id="square2" class="am"><h4>Tuesday</h4></div>
-      <div id="square3" class="am"><h4>Wednesday</h4></div>
-      <div id="square4" class="am"><h4>Thursday</h4></div>
-      <div id="square5" class="am"><h4>Friday</h4></div>
-  </div>
-
-  <div id="containerPM">
-    <h3>PM</h3>
-      <div id="square6" class="pm">after</div>
-      <div id="square7" class="pm">school</div>
-      <div id="square8" class="pm">club</div>
-      <div id="square9" class="pm">all</div>
-      <div id="square10" class="pm">welcome</div>
-  </div>
-
-
-  <!-- <div id="containerTimetable" class="timetable">
-    <h3>AM</h3>
-    <div id="monday">
-      <div id="square1" class="mon"><h4>Monday AM</h4><p></p></div>
-      <div id="square2" class="mon"><h4>Monday PM</h4></div>
-      </div>
-     <div id"tuesday"> 
-      <div id="square1" class="tue"><h4>Tuesday Am</h4></div>
-      <div id="square2" class="tue"><h4>Tuesday PM</h4></div>
-    </div>
-    <div id="wednesday">
-      <div id="square1" class="wed"><h4>Wednesday AM</h4></div>
-      <div id="square2" class="wed"><h4>Wednesday PM</h4></div>
-    </div>
-    <div id="thursday"
-      <div id="square1" class="thur"><h4>Thursday AM</h4></div>
-      <div id="square2" class="thur"><h4>Thursday PM</h4></div>
-    </div>
-    <div id="friday">
-      <div id="square1" class="fri"><h4>Friday AM</h4></div>
-      <div id="square2" class="fri"><h4>Friday PM</h4></div>
-    </div>
-  </div> -->
-  
-  <ul>
-    <li ng-repeat="event in events.all | orderBy: start" class="col-md-4">
-      <form ng-if="event.isEditing" ng-submit="events.updateevent(event)">
-        <input type="text" name="name" placeholder="Name" ng-model="event.name">
-        <input type="text" name="date" placeholder="Date" ng-model="event.date">
-        <input type="text" name="content" placeholder="Content" ng-model="event.content">
-        <input type="text" name="image" placeholder="Image" ng-model="event.image">
-        <button ng-click="event.isEditing=false" class="btn btn-default">Update</button>
-      </form>
-
-      <div ng-if="!event.isEditing">
-        <strong>{{event.name}}</strong><br><em>{{event.date}}</br><br><a>{{event.content}}</a></br><br><a>{{event.image}}</a></br></em>
-        <button ng-click="event.isEditing=true" class="btn btn-default">Edit</button>
-        <button ng-click="events.deleteevent(event)" class="btn btn-default">Delete</button>
-      </div>
-    </li>
-  </ul>
-
-
-  <form class="add-event" ng-submit='Events.addevent()' class="form-group">
-    <div>
-      <label for="new-event-name"></label>
-      <input class="form-control" type="text" id="new-event-name" placeholder="Name" ng-model='events.newEvent.name'>
-    </div>
-
-    <div>
-      <label for="new-event-date"></label>
-      <input class="form-control" type="text" id="new-event-date" placeholder="Date" ng-model='events.newEvent.date'>
-    </div>
-
-    <div>
-      <label for="new-event-content"></label>
-      <input class="form-control" type="text" id="new-event-content" placeholder="Content" ng-model='events.newEvent.content'>
-    </div>
-
-    <div>
-      <label for="new-event-image"></label>
-      <input class="form-control" type="text" id="new-event-image" placeholder="Image" ng-model='events.newEvent.image'>
-    </div>
-
-    <div>
-      <input type="submit" class="btn btn-default" value="Add event">
-    </div>
-  </form>
-
+  <table>
+    <tr>
+      <td>Monday</td>
+      <td>Tuesday</td>
+      <td>Wednesday</td>
+      <td>Thursday</td>
+      <td>Friday</td>
+      <td>Saturday</td>
+    </tr>
+    <tr>
+      <td ng-repeat="slots in events.all">
+        <div ng-repeat="(timeOfDay, slot) in slots">
+          <div class="table-block">
+            <label>{{ timeOfDay }}</label>
+            <h4>{{ slot.name }}</h4>
+            <p>{{ slot.content }}</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
   <div ng-controller="MapController as map">
-    <map center="map.mapCenter" markers="map.mapMarkers" infoWindow="map.mapInfoWindow.show" ng-click="map.openInfoWindow">
-      
-  </map>
+    <map center="map.mapCenter" markers="map.mapMarkers"></map>
   </div>
-
-</section>
+</section> 

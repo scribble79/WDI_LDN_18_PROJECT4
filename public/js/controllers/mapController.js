@@ -6,9 +6,13 @@ function MapController() {
   this.mapCenter = { lat: 51.480484, lng: -0.055939 };
   this.mapMarkers =[{
     name: "Pilgrim's Way Primary School",
+    address1: "London Borough of Southwark, Tustin Estate Manor Grove, SE15 1EF",
+    address2: "Tustin Estate Manor Grove",
+    address3: "SE15 1EF",
+    contact: "Contact",
     position: { lat: 51.480484, lng: -0.055939 },
-  }]
-  this.mapInfoWindow = { content: "Pilgrim's Way Primary School, London Borough of Southwark, Tustin Estate Manor Grove, SE15 1EF" }
+  }];
+
 }
 
 function Gmap() {
@@ -18,8 +22,7 @@ function Gmap() {
     template: '<div class="google-map"></div>',
     scope: {
       center: '=',
-      markers: '=',
-      infoWindow: '='
+      markers: '='
     },
     link: function(scope, $element, attr) {
 
@@ -31,25 +34,21 @@ function Gmap() {
 
       if(scope.markers) {
         scope.markers.forEach(function(marker) {
-          new google.maps.Marker({
+          var gMarker = new google.maps.Marker({
             position: marker.position,
             map: map
             // animation: google.maps.Animation.BOUNCE
           });
-        });
 
-        if(scope.infoWindow) {
-         scope.infoWindow.forEach(function(infoWindow) {
-           new google.maps.InfoWindow({
-             position: position,
-             content: content
-           });
-              marker.addListener('click', function() {
-              infowindow.open(map, marker);
-             });
-         });
-       }
-     }
-   }
- }
+          var infowindow = new google.maps.InfoWindow({
+            content: '<div class="info-window">' + marker.name + ", " + marker.address1 + marker.contact + '</div>'
+          });
+
+          gMarker.addListener('click', function() {
+            infowindow.open(map, gMarker);
+          });
+        });
+      }
+    }
+  }
 }

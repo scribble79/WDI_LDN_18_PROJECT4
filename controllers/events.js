@@ -1,4 +1,4 @@
-var Events = require('../models/event');
+var Event = require('../models/event');
 
 function eventsIndex(req, res) {
   Event.find(function(err, events) {
