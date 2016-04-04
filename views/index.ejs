@@ -59,10 +59,12 @@
                 <a herf>{{item.name}}</a></li> -->
                   <li><a ui-sref="home">Home</a></li>
                   <li><a ui-sref="info">Information For Families</a></li>
-                  <li><a ui-sref="center">Kintore Way</a></li>
+                  <li ng-repeat="(key, center) in centers.all" class="homelink">
+                  <a ui-sref="center({ id: center._id })">{{ center.name }}</a>
+                  <!-- <li><a ui-sref="center">Kintore Way</a></li>
                   <li><a ui-sref="center">Pilgrims Way</a></li>
                   <li><a ui-sref="center">South Bermondsey</a></li>
-                  <li><a ui-sref="center">Rotherhite</a></li>
+                  <li><a ui-sref="center">Rotherhite</a></li> -->
                 </ul>
               </span>
             </ul> 

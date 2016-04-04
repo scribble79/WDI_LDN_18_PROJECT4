@@ -13,15 +13,17 @@ function Router($stateProvider, $urlRouterProvider){
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: 'home.html'
+    templateUrl: 'home.html',
+    controller: 'centersController as centers'
   })
   .state('info', {
     url: '/info',
     templateUrl: 'info.html'
   })
   .state('center', {
-    url: '/center/:name',
-    templateUrl: 'center.html'
+    url: '/center/:id',
+    templateUrl: 'center.html',
+    controller: 'centersController as centers'
   })
   .state('login', {
     url: '/login',

@@ -1,5 +1,4 @@
 <h1>Bermondsey and Rotherhite Locality<br>Children's Centres</br></h1>
-
 <!-- <ul class="homelink"> -->
   <li class="homelink">
     <div class="cloud1">
@@ -7,30 +6,12 @@
       <a ui-sref="info">Information For Families</a>
     </div>
   </li>
-  <li class="homelink">
-    <div class="cloud2">
+  <li ng-repeat="(key, center) in centers.all" class="homelink">
+    <div class="cloud{{key+2}}">
       <img src="/images/cloud.png" alt="Cloud" style="width:284px;height:208px;">
-      <a ui-sref="center">Kintore Way</a>
+      <a ui-sref="center({ id: center._id })">{{ center.name }}</a>
     </div>
   </li>
-  <li class="homelink">
-    <div class="cloud3">
-      <img src="/images/cloud.png" alt="Cloud" style="width:284px;height:208px;">
-      <a ui-sref="center">Pilgrims Way</a>
-    </div>
-  </li>
-  <li class="homelink">
-    <div class="cloud4">
-      <img src="/images/cloud.png" alt="Cloud" style="width:284px;height:208px;">
-      <a ui-sref="center">South Bermondsey</a>
-    </div>
-  </li>
-  <li class="homelink">
-    <div class="cloud5">
-      <img src="/images/cloud.png" alt="Cloud" style="width:284px;height:208px;">
-      <a ui-sref="center">Rotherhite</a>
-    </div>
-  </li> 
 <!-- </ul> -->
 
 

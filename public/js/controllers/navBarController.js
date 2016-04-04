@@ -11,10 +11,8 @@ function navBarController(Center) {
   console.log(self.centers);
   self.items = [{
     name: 'Home',
-    url: ""
   },{
     name: 'Information For Families',
-    url: ""
   },{
     name: 'Kintore Way',
     url: "http://www.kintoreway.com/page_viewer.asp?page=Home&pid=1"

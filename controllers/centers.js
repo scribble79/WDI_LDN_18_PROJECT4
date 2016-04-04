@@ -8,7 +8,7 @@ function centersIndex(req, res) {
 }
 
 function centersShow(req, res) {
-  Center.findById(req.params.id, function(err, center) {
+  Center.findById(req.params.id).populate('events').exec(function(err, center) {
     if(err) return res.status(500).json({ message: err });
     return res.status(200).json(center);
   });
