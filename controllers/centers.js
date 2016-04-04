@@ -1,4 +1,4 @@
-var Centers = require('../models/center');
+var Center = require('../models/center');
 
 function centersIndex(req, res) {
   Center.find(function(err, centers) {

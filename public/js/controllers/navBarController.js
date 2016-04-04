@@ -2,11 +2,13 @@ angular
     .module('ChildrensCenters')
     .controller("navBarController", navBarController);
 
-
-function navBarController() {
+navBarController.$inject = ["Center"];
+function navBarController(Center) {
   console.log("Loaded")
   var self = this;
 
+  self.centers = Center.query();
+  console.log(self.centers);
   self.items = [{
     name: 'Home',
     url: ""

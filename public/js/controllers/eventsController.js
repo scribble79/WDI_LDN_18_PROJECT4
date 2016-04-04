@@ -6,6 +6,18 @@ EventsController.$inject = ['Event']
 function EventsController(Event) {
   var self = this;
 
+  this.selectedEvent = null;
+
+  this.selectEvent = function(event) {
+    this.selectedEvent = event;
+  }
+
+  this.saveEvent = function() {
+    Event.update(this.selectedEvent, function() {
+      self.selectedEvent = null
+    });
+  }
+
   Event.query(function(events) {
     var days = {
       Monday: { AM: {}, PM: {} },
@@ -17,10 +29,7 @@ function EventsController(Event) {
     };
 
     events.forEach(function(event) {
-      days[event.day][event.timeOfDay] = {
-        content: event.content,
-        name: event.name
-      };
+      days[event.day][event.timeOfDay] = event;
     });
 
     self.all = days;

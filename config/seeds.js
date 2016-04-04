@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 var Event = require('../models/event');
+var Center = require('../models/center');
 var db = require('./database');
 
 mongoose.connect(db.uri);
 
+Center.collection.drop();
 Event.collection.drop();
 
 Event.create([{
@@ -108,5 +110,25 @@ Event.create([{
 }], function(err, events) {
   if(err) console.error(err);
   else console.log(events);
-  mongoose.connection.close();
+  Center.create([{
+    name: "Kintore Way",
+    link: 'http://www.kintoreway.com/page_viewer.asp?page=Home&pid=1',
+    events: [events[0], events[10]]
+  },{
+    name: "Pilgrims Way",
+    link: 'http://www.pilgrimswayprimary.co.uk/',
+    events: [events[0], events[10]]
+  },{
+    name: "South Bermondsey",
+    link: 'http://www.pilgrimswayprimary.co.uk/ccsb/',
+    events: [events[0], events[10]]
+  },{
+    name: "Rotherhite",
+    link: 'http://rotherhitheprimary.co.uk/childrens-centre/',
+    events: [events[0], events[10]]
+  }], function(err, centers) {
+    if(err) console.error(err);
+    else console.log(centers);
+    mongoose.connection.close();
+  });
 });

@@ -20,7 +20,7 @@ function Router($stateProvider, $urlRouterProvider){
     templateUrl: 'info.html'
   })
   .state('center', {
-    url: '/center',
+    url: '/center/:name',
     templateUrl: 'center.html'
   })
   .state('login', {

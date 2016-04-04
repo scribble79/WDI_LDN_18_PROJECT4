@@ -4,7 +4,7 @@
   <title>Children's Centre's</title>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxM36DxD-TmmCuWMML0UXBVSirOUkF42Q"></script>
-  <script src="/vendor/angular/angular.min.js"></script>
+  <script src="/vendor/angular/angular.js"></script>
   <script src="/vendor/angular-resource/angular-resource.min.js"></script>
   <script src="/vendor/angular-jwt/dist/angular-jwt.min.js"></script>
   <script src="/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -44,43 +44,42 @@
           <img alt="Brand" src="/images/Southwarklogo.png" width="90px">
         </a>
         <ul class="nav navbar-nav">
-        <li><a href="http://www.kintoreway.com/page_viewer.asp?page=Home&pid=1
-" class="external">Kintore Way</a></li>
-        <li><a href="http://www.pilgrimswayprimary.co.uk/" class="external">Pilgrims Way Primary</a></li>
-        <li><a href="http://www.pilgrimswayprimary.co.uk/ccsb/" class="external">South Bermondsey</a></li>
-        <li><a href=" http://rotherhitheprimary.co.uk/childrens-centre/" class="external">Rotherhithe</a></li>
+          <li ng-repeat="center in nav.centers"><a href="{{center.link}}">{{center.name}}</a></li>
+          <li ng-hide="admins.isLoggedIn()"><a href="#login">Login</a></li>
+          <li ng-hide="admins.isLoggedIn()"><a href="#register">Register</a></li>
+          <li ng-show="admins.isLoggedIn()"><a href="#logout" ng-click="admins.logout()">Logout</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <span class="dropdown" uib-dropdown on-toggle="toggled(open)">
-            <a href id="simple-dropdown" uib-dropdown-toggle>
-              Children's Centres Information
-            </a>
-            <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
-            <!-- <li ng-repeat="item in nav.items">
-                <a href>{{item.name}}</a> -->
-                <li><a ui-sref="home">Home</a></li>
-                <li><a ui-sref="info">Information For Families</a></li>
-                <li><a ui-sref="center">Kintore Way</a></li>
-                <li><a ui-sref="center">Pilgrims Way</a></li>
-                <li><a ui-sref="center">South Bermondsey</a></li>
-                <li><a ui-sref="center">Rotherhite</a></li>
-              </li>
-            </ul>
-          </span>
-        </ul> 
-      </div>
-    </div>
-  </nav>
+          <ul class="nav navbar-nav navbar-right">
+            <span class="dropdown" uib-dropdown on-toggle="toggled(open)">
+              <a href id="simple-dropdown" uib-dropdown-toggle>
+                Children's Centres Information
+              </a>
+              <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+                <!-- <li ng-repeat="item in nav.items">
+                <a herf>{{item.name}}</a></li> -->
+                  <li><a ui-sref="home">Home</a></li>
+                  <li><a ui-sref="info">Information For Families</a></li>
+                  <li><a ui-sref="center">Kintore Way</a></li>
+                  <li><a ui-sref="center">Pilgrims Way</a></li>
+                  <li><a ui-sref="center">South Bermondsey</a></li>
+                  <li><a ui-sref="center">Rotherhite</a></li>
+                </ul>
+              </span>
+            </ul> 
+          </div>
+        </div>
+      </nav>
 
 
   <main ui-view></main>
 
-
+<div class="tickerContainer">
   <ul ng-controller="tickerController as tickerCtl" ticker timing="2500" class="ticker">
     <li ng-repeat="item in tickerCtl.myTickerItems">
       {{item.title}} - {{item.copy}}
     </li>
   </ul>
+</div>
 
 </body>
 </html>
