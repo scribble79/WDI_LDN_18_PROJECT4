@@ -33,19 +33,20 @@ div.navbar-header {
   display: inline-block;
 }*/
 
-.ticker .minus-margin-top {
+/*.ticker{
   margin-top:-60px;
   list-style: none;
   text-decoration: none;
-  z-index: 3;
-}
+  display: inline-block;
+
+}*/
 
 @media (min-width:768px) {
-  [ticker] .minus-margin-top {
-    margin-top:-30px;
+  .ticker {
+    margin-top: 50px;
     list-style: none;
     text-decoration: none;
-    z-index: 3;
+    display: inline;
   }
 }
 
@@ -78,3 +79,61 @@ div {
   width: 250px;
   height: 300px;
 }
+
+/*.mon {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
+}
+
+.tue {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
+}
+
+.wed {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
+}
+
+.thur {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
+}
+
+.fri {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 2px;
+  width: 250px;
+  height: 300px;
+}
+
+#square1 {
+  display: inline-block;
+}
+
+#square2 {
+  display: inline-block;
+}*/

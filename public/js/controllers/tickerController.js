@@ -29,5 +29,13 @@ function tickerController() {
   {
    title: 'item 6',
    copy: 'Childrens Centers'
+  },
+  {
+   title: 'item 7',
+   copy: 'new news'
+  },
+  {
+   title: 'item 8',
+   copy: 'and then there was some more, and it went on and on!'
   }];
 }
