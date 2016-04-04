@@ -6,7 +6,7 @@ function MapController() {
   this.mapCenter = { lat: 51.480484, lng: -0.055939 };
   this.mapMarkers =[{
     name: "Pilgrim's Way Primary School",
-    address1: "London Borough of Southwark, Tustin Estate Manor Grove, SE15 1EF",
+    address1: "London Borough of Southwark",
     address2: "Tustin Estate Manor Grove",
     address3: "SE15 1EF",
     contact: "Contact",
@@ -42,7 +42,7 @@ function Gmap() {
 
           var infowindow = new google.maps.InfoWindow({
             infowindow: '<div class="infowindowSize">',
-            content: '<div class="info-window">' + marker.name + ", " + marker.address1 + marker.contact + '</div>'
+            content: '<div class="info-window">' + marker.name + ", " + marker.address1 + ", " + marker.address2 + ", " + marker.address3 + '<br>' + marker.contact + '</div>'
           });
 
           gMarker.addListener('click', function() {
