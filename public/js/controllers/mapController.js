@@ -9,7 +9,7 @@ function MapController() {
     address1: "London Borough of Southwark",
     address2: "Tustin Estate Manor Grove",
     address3: "SE15 1EF",
-    contact: '<a href="http://www.pilgrimswayprimary.co.uk/#">Contact us</a>',
+    contact: '<a href="mailto:admin@pilgrimsway.southwark.sch.uk" target="_top">Contact us</a>',
     position: { lat: 51.480484, lng: -0.055939 },
   }];
 
