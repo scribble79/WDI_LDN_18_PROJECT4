@@ -2,11 +2,12 @@ angular
     .module('ChildrensCenters')
     .controller("centersController", CentersController);
 
-CentersController.$inject = ['Center', 'Event', '$state']
-function CentersController(Center, Event, $state) {
+CentersController.$inject = ['Center', 'Event', '$state', 'tokenService']
+function CentersController(Center, Event, $state, tokenService) {
   var self = this;
 
   this.selectedEvent = null;
+  this.newEvent = null;
   this.currentCenter = null;
 
   this.all = Center.query();
@@ -17,18 +18,18 @@ function CentersController(Center, Event, $state) {
       self.currentCenter = center;
 
       var days = {
-        Monday: { AM: {}, PM: {} },
-        Tuesday: { AM: {}, PM: {} },
-        Wednesday: { AM: {}, PM: {} },
-        Thursday: { AM: {}, PM: {} },
-        Friday: { AM: {}, PM: {} },
-        Saturday: { AM: {}, PM: {} }
+        Monday: { AM: [], PM: [] },
+        Tuesday: { AM: [], PM: [] },
+        Wednesday: { AM: [], PM: [] },
+        Thursday: { AM: [], PM: [] },
+        Friday: { AM: [], PM: [] },
+        Saturday: { AM: [], PM: [] }
       };
 
       self.mapMarker = center;
 
       center.events.forEach(function(event) {
-        days[event.day][event.timeOfDay] = event;
+        days[event.day][event.timeOfDay].push(event);
       });
 
       self.calendar = days;
@@ -39,10 +40,12 @@ function CentersController(Center, Event, $state) {
     this.selectedEvent = event;
   }
 
-  this.addEvent = function() {
-    Event.post(this.selectedEvent, function(){
-      self.all.push(self.newEvent);
-      self.selectedEvent = null
+  this.addEvent = function(event) {
+    console.log(this.currentCenter);
+    this.newEvent.center = this.currentCenter._id;
+    Event.save(this.newEvent, function(res){
+      self.newEvent = null
+      $state.go('center', { id: self.currentCenter._id });
     });
   }
 
@@ -51,6 +54,5 @@ function CentersController(Center, Event, $state) {
       self.selectedEvent = null
     });
   }
-
 
 }

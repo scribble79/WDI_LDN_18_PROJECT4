@@ -40,7 +40,8 @@ router.route('/centers/:id')
 
  // event routes
 router.route('/events')
-  .get(eventsController.index);
+  .get(eventsController.index)
+  .post(eventsController.create);
 
 router.route('/events/:id')
   .get(eventsController.show)

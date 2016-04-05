@@ -5,6 +5,6 @@ angular
 Event.$inject = ['$resource'];
 function Event($resource) {
  return $resource('/events/:id', { id: '@_id' }, {
-   update: { method: "PUT" },
+    update: { method: "PUT" }
  });
 }
