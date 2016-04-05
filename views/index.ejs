@@ -21,7 +21,7 @@
   <script src="/js/models/center.js"></script>
   <script src="/js/controllers/eventsController.js"></script>
   <script src="/js/models/event.js"></script>
-  <script src="/js/controllers/mapController.js"></script>
+  <script src="/js/directives/mapDirective.js"></script>
   <script src="/js/services/token.js"></script>
   <script src="/js/services/authInterceptor.js"></script>
 
@@ -44,7 +44,9 @@
           <img alt="Brand" src="/images/Southwarklogo.png" width="90px">
         </a>
         <ul class="nav navbar-nav">
-          <li ng-repeat="center in nav.centers"><a href="{{center.link}}">{{center.name}}</a></li>
+          <li ng-repeat="center in nav.centers">
+            <a ui-sref="center({ id: center._id })">{{center.name}}</a>
+          </li>
           <li ng-hide="admins.isLoggedIn()"><a href="#login">Login</a></li>
           <li ng-hide="admins.isLoggedIn()"><a href="#register">Register</a></li>
           <li ng-show="admins.isLoggedIn()"><a href="#logout" ng-click="admins.logout()">Logout</a></li>
@@ -59,12 +61,7 @@
                 <a herf>{{item.name}}</a></li> -->
                   <li><a ui-sref="home">Home</a></li>
                   <li><a ui-sref="info">Information For Families</a></li>
-                  <li ng-repeat="(key, center) in centers.all" class="homelink">
-                  <a ui-sref="center({ id: center._id })">{{ center.name }}</a>
-                  <!-- <li><a ui-sref="center">Kintore Way</a></li>
-                  <li><a ui-sref="center">Pilgrims Way</a></li>
-                  <li><a ui-sref="center">South Bermondsey</a></li>
-                  <li><a ui-sref="center">Rotherhite</a></li> -->
+                  <li ng-repeat="center in nav.centers"><a href="{{ center.link }}">{{ center.name }}</a></li>
                 </ul>
               </span>
             </ul> 

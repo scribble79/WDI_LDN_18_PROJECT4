@@ -20,7 +20,7 @@ function AdminsController(Admin, tokenService, $state) {
     self.message = res.message;
 
     // go to center state
-    $state.go('center');
+    $state.go('home');
   }
 
   self.login = function() {

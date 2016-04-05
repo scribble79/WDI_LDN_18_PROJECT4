@@ -103,6 +103,15 @@ Event.create([{
   day: "Saturday",
   startTime: "12.30",
   endTime: "14.30",
+  timeOfDay: "AM",
+  venue: "Pilgrims’ Way Children’s Centre",
+  content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
+  image: "Kids playing with Dad's"
+},{
+  name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
+  day: "Saturday",
+  startTime: "12.30",
+  endTime: "14.30",
   timeOfDay: "PM",
   venue: "Pilgrims’ Way Children’s Centre",
   content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
@@ -116,7 +125,12 @@ Event.create([{
   Center.create([{
     name: "Kintore Way",
     link: 'http://www.kintoreway.com/page_viewer.asp?page=Home&pid=1',
-    events: eventIds
+    events: eventIds,
+    address1: '97 - 102 Grange Road',
+    address2: 'Bermondsey, London',
+    address3: 'SE1 3BW',
+    contact: "office@kintoreway.southwark.sch.uk",
+    position: { lat: 51.494377, lng: -0.076093 }
   }], function(err, centers) {
     if(err) return console.error(err);
     console.log(centers);
@@ -214,6 +228,15 @@ Event.create([{
   venue: "South Bermondsey CC",
   content: "Enjoy a Stay and Play session with opportunities to get creative and play activities for all parents, carers, and child-minders with children aged 0-5years. Come and have fun with your little ones.",
   image: "Kids playing"
+},{
+  name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
+  day: "Saturday",
+  startTime: "12.30",
+  endTime: "14.30",
+  timeOfDay: "AM",
+  venue: "Pilgrims’ Way Children’s Centre",
+  content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
+  image: "Kids playing with Dad's"
 },{
   name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
   day: "Saturday",
@@ -232,7 +255,12 @@ Event.create([{
   Center.create([{
     name: "Pilgrims Way",
     link: 'http://www.pilgrimswayprimary.co.uk/',
-    events: eventIds
+    events: eventIds,
+    address1: "London Borough of Southwark",
+    address2: "Tustin Estate Manor Grove",
+    address3: "SE15 1EF",
+    contact: "admin@pilgrimsway.southwark.sch.uk",
+    position: { lat: 51.480484, lng: -0.055939 }
   }], function(err, centers) {
     if(err) return console.error(err);
     console.log(centers);
@@ -330,6 +358,15 @@ Event.create([{
   venue: "South Bermondsey CC",
   content: "Enjoy a Stay and Play session with opportunities to get creative and play activities for all parents, carers, and child-minders with children aged 0-5years. Come and have fun with your little ones.",
   image: "Kids playing"
+},{
+  name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
+  day: "Saturday",
+  startTime: "12.30",
+  endTime: "14.30",
+  timeOfDay: "AM",
+  venue: "Pilgrims’ Way Children’s Centre",
+  content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
+  image: "Kids playing with Dad's"
 },{
   name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
   day: "Saturday",
@@ -348,7 +385,12 @@ Event.create([{
   Center.create([{
     name: "South Bermondsey",
     link: 'http://www.pilgrimswayprimary.co.uk/ccsb/',
-    events: eventIds
+    events: eventIds,
+    address1: "London Borough of Southwark",
+    address2: "Tustin Estate Manor Grove",
+    address3: "SE15 1EF",
+    contact: "admin@pilgrimsway.southwark.sch.uk",
+    position: { lat: 51.480484, lng: -0.055939 }
   }], function(err, centers) {
     if(err) return console.error(err);
     console.log(centers);
@@ -451,6 +493,15 @@ Event.create([{
   day: "Saturday",
   startTime: "12.30",
   endTime: "14.30",
+  timeOfDay: "AM",
+  venue: "Pilgrims’ Way Children’s Centre",
+  content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
+  image: "Kids playing with Dad's"
+},{
+  name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
+  day: "Saturday",
+  startTime: "12.30",
+  endTime: "14.30",
   timeOfDay: "PM",
   venue: "Pilgrims’ Way Children’s Centre",
   content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
@@ -462,9 +513,14 @@ Event.create([{
   });
 
   Center.create([{
-    name: "Rotherhite",
+    name: "Rotherhithe",
     link: 'http://rotherhitheprimary.co.uk/childrens-centre/',
-    events: eventIds
+    events: eventIds,
+    address1: "Rotherhite New Road",
+    address2: "London",
+    address3: "SE16 2PL",
+    contact: "office@rotherhite.southwark.sch.uk",
+    position: { lat: 51.491570, lng: -0.049864 }
   }], function(err, centers) {
     if(err) return console.error(err);
     console.log(centers);
