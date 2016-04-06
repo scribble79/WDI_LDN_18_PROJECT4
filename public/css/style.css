@@ -82,7 +82,17 @@ section.info-container {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
 }
+
+section.info-container:hover { 
+  width: 800px;
+  height: auto;
+} 
 
 section.school-container {
   line-height: 300px;
@@ -108,7 +118,17 @@ section.school-container:nth-child(1) {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
 }
+
+section.school-container:nth-child(1):hover { 
+  width: 300px;
+  height: auto;
+} 
 
 section.school-container:nth-child(2) {
   background: url(/images/kintoreway2.JPG) no-repeat center center;
@@ -116,6 +136,16 @@ section.school-container:nth-child(2) {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+section.school-container:nth-child(2):hover { 
+  width: 300px;
+  height: 300px;
 }
 
 section.school-container:nth-child(3) {
@@ -124,6 +154,16 @@ section.school-container:nth-child(3) {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+section.school-container:nth-child(3):hover { 
+  width: 300px;
+  height: 300px;
 }
 
 section.school-container:nth-child(4) {
@@ -132,6 +172,16 @@ section.school-container:nth-child(4) {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+section.school-container:nth-child(4):hover { 
+  width: 300px;
+  height: 300px;
 }
 
 .shader {
@@ -222,7 +272,7 @@ div h4 {
 
 /*----- CAROUSEL -----*/
 
-.carousel a { 
+.myCarousel a { 
   cursor: pointer; 
 }
 
