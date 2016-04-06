@@ -26,23 +26,27 @@
   <script src="/js/services/authInterceptor.js"></script>
 
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<!-- 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
--->
-<link rel="stylesheet" type="text/css" href="css/custom.css">
-
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-
-<link rel="stylesheet" href="/vendor/angular-ticker/release/ticker.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="/vendor/angular-ticker/release/ticker.css">
 
 </head>
 <body ng-controller="adminsController as admins">
-  <nav ng-controller="navBarController as nav" class="navbar navbar-default navbar-fixed-top">
+  <header>
+    <div class="header-content">
+      <img ui-sref="home" alt="Brand" src="/images/Southwarklogo.png">
+      <h1>Bermondsey and Rotherhite Locality Children's Centres</h1>
+      <a href=""><i class="fa fa-twitter-square"></i></a>
+      <a href=""><i class="fa fa-facebook-square"></i></a>
+    </div>
+  </header>
+  <nav ng-controller="navBarController as nav" class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" ui-sref="home">
-          <img alt="Brand" src="/images/Southwarklogo.png" width="90px">
-        </a>
         <ul class="nav navbar-nav">
           <li ng-repeat="center in nav.centers">
             <a ui-sref="center({ id: center._id })">{{center.name}}</a>
@@ -51,34 +55,23 @@
           <li ng-hide="admins.isLoggedIn()"><a href="#register">Register</a></li>
           <li ng-show="admins.isLoggedIn()"><a href="#logout" ng-click="admins.logout()">Logout</a></li>
         </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <span class="dropdown" uib-dropdown on-toggle="toggled(open)">
-              <a href id="simple-dropdown" uib-dropdown-toggle>
-                Children's Centres Information
-              </a>
-              <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
-                <!-- <li ng-repeat="item in nav.items">
-                <a herf>{{item.name}}</a></li> -->
-                  <li><a ui-sref="home">Home</a></li>
-                  <li><a ui-sref="info">Information For Families</a></li>
-                  <li ng-repeat="center in nav.centers"><a href="{{ center.link }}">{{ center.name }}</a></li>
-                </ul>
-              </span>
-            </ul> 
-          </div>
+        <ul class="nav navbar-nav navbar-right">
+          <span class="dropdown" uib-dropdown on-toggle="toggled(open)">
+            <a href id="simple-dropdown" uib-dropdown-toggle>
+              Children's Centres Information
+            </a>
+            <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+              <li ng-repeat="item in nav.items">
+                <a herf>{{item.name}}</a></li>
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="info">Information For Families</a></li>
+                <li ng-repeat="center in nav.centers"><a href="{{ center.link }}">{{ center.name }}</a></li>
+              </ul>
+            </span>
+          </ul> 
         </div>
-      </nav>
-
-
-  <main ui-view></main>
-
-<!-- <div class="tickerContainer">
-  <ul ng-controller="tickerController as tickerCtl" ticker timing="2500" class="ticker">
-    <li ng-repeat="item in tickerCtl.myTickerItems">
-      {{item.title}} - {{item.copy}}
-    </li>
-  </ul>
-</div> -->
-
-</body>
-</html>
+      </div>
+    </nav>
+    <main ui-view></main>
+  </body>
+  </html>
