@@ -17,7 +17,7 @@ function CentersController(Center, Event, $state, tokenService) {
 
       self.currentCenter = center;
 
-      var days = {
+      self.week = {
         Monday: { AM: [], PM: [] },
         Tuesday: { AM: [], PM: [] },
         Wednesday: { AM: [], PM: [] },
@@ -25,14 +25,15 @@ function CentersController(Center, Event, $state, tokenService) {
         Friday: { AM: [], PM: [] },
         Saturday: { AM: [], PM: [] }
       };
-
+      self.days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      
       self.mapMarker = center;
-
+      
       center.events.forEach(function(event) {
-        days[event.day][event.timeOfDay].push(event);
+        self.week[event.day][event.timeOfDay].push(event);
       });
 
-      self.calendar = days;
+      self.calendar = self.week;
     });
   }
 
@@ -41,6 +42,7 @@ function CentersController(Center, Event, $state, tokenService) {
   }
 
   this.addEvent = function(event) {
+    console.log(event);
     this.newEvent.center = this.currentCenter._id;
     Event.save(this.newEvent, function(res){
       self.newEvent = null

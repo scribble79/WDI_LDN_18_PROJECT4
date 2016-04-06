@@ -66,8 +66,8 @@
           <td>Saturday</td>
         </tr>
         <tr>
-          <td ng-repeat="days in centers.calendar">
-            <div ng-repeat="(timeOfDay, events) in days">
+          <td ng-repeat="day in centers.days track by $index">
+            <div ng-repeat="(timeOfDay, events) in centers.week[day]">
               <div class="table-block">
                 <label>{{ timeOfDay }}</label>
                 <div ng-repeat="event in events" ng-click="centers.selectEvent(event)" class="tablecell" id="{{event._id}}">

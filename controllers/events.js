@@ -18,7 +18,7 @@ function eventsShow(req, res) {
 function eventsCreate(req, res) {
   Event.create(req.body, function(err, event) {
     if(err) return res.status(500).json({ message: err });
-
+    console.log(event);
     Center.findByIdAndUpdate(req.body.center, { $push: { events: event._id } }, function(err, center) {
       if(err) return res.status(500).json({ message: err });
 

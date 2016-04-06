@@ -74,10 +74,10 @@ header {
 
 section.info-container {
   position: relative;
-  background-color: red;
+  /*background-color: red;*/
   height: 200px;
   line-height: 200px;
-  background-image: url(/images/kintore6.jpg);
+  background-image: url(/images/lineofbabies.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -96,7 +96,7 @@ section.info-container:hover {
 
 section.school-container {
   line-height: 300px;
-  background-color: green;
+  /*background-color: green;*/
   height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -217,12 +217,16 @@ td {
 }
 
 .table-block {
-  background-color: red;
+  /*background-color: red;*/
   height: 300px;
 }
 
+.pcell {
+  text-align: left;
+}
+
 /*.tablecell {
-  border: 1px solid black;
+  text-align: left;
 }*/
 
 /*.pcell {
@@ -267,12 +271,21 @@ td {
 }
 */
 div h4 {
+  font-weight: 700;
+}
+
+h4 {
   font-weight: 500;
 }
 
 /*----- CAROUSEL -----*/
 
-.myCarousel a { 
+#myCarousel {
+  height: 300px;
+  overflow: hidden;
+}
+
+#myCarousel a { 
   cursor: pointer; 
 }
 
@@ -291,4 +304,18 @@ section.carousel slide-child(3){
 
 section.carousel slide-child(4){
  /* height: 300px;*/
+}
+
+/*----- INFO PAGE -----*/
+h3 {
+  font-size: 40px;
+  padding-top: 15px;
+}
+
+.infotext {
+  text-align: left;
+}
+
+.infonews {
+  text-align: left;
 }
