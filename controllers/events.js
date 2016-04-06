@@ -35,8 +35,9 @@ function eventsUpdate(req, res) {
 }
 
 function eventsDelete(req, res) {
+  console.log(req.body);
   Event.findByIdAndRemove(req.params.id, function(err) {
-    if(err) return res.status(500).json({ message: err });
+    if(err) return res.status(500).json({ message: err }) && console.log(err);
     return res.status(204).send();
   });
 }

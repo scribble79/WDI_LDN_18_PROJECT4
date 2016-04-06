@@ -41,7 +41,6 @@ function CentersController(Center, Event, $state, tokenService) {
   }
 
   this.addEvent = function(event) {
-    console.log(this.currentCenter);
     this.newEvent.center = this.currentCenter._id;
     Event.save(this.newEvent, function(res){
       self.newEvent = null
@@ -52,6 +51,15 @@ function CentersController(Center, Event, $state, tokenService) {
   this.saveEvent = function() {
     Event.update(this.selectedEvent, function() {
       self.selectedEvent = null
+    });
+  }
+
+  this.deleteEvent = function() {
+    var id = this.selectedEvent._id;
+    Event.delete({ id: id }, function() {
+      self.selectedEvent = null;
+      var box = document.getElementById(id)
+      box.parentNode.removeChild(box);
     });
   }
 

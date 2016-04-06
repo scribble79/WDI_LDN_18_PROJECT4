@@ -19,7 +19,7 @@
           <div ng-repeat="(timeOfDay, events) in days">
             <div class="table-block">
               <label>{{ timeOfDay }}</label>
-              <div ng-repeat="event in events" ng-click="centers.selectEvent(event)" class="tablecell">
+              <div ng-repeat="event in events" ng-click="centers.selectEvent(event)" class="tablecell" id="{{event._id}}">
                 <h4>{{ event.name }}</h4>
                 <p class="pcell">{{ event.content }}</p>
                 <a ng-click="centers.readMore(event)">Read More</a>
@@ -41,6 +41,7 @@
       </div>
       <button class="btn btn-primary">Save</button>
     </form>
+    <button class="btn btn-primary" ng-click="centers.deleteEvent()">Delete</button>
 
     <div ng-if="!admins.isLoggedIn()">
       <h2>{{ centers.selectedEvent.name }}</h2>
