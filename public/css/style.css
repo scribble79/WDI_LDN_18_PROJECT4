@@ -94,6 +94,14 @@ section.info-container:hover {
   height: auto;
 } 
 
+section.info-container a {
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
 section.school-container {
   line-height: 300px;
   /*background-color: green;*/
@@ -223,6 +231,15 @@ td {
 
 .pcell {
   text-align: left;
+}
+
+.readtitle {
+ font-weight: 500;
+ font-size: 30px; 
+}
+
+.readtext {
+  font-size: 20px;
 }
 
 /*.tablecell {

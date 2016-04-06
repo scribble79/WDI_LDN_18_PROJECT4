@@ -95,7 +95,7 @@
       <button class="btn btn-primary" ng-click="centers.deleteEvent()" ng-if="admins.isLoggedIn()">Delete</button>
 
       <div ng-if="!admins.isLoggedIn()">
-        <h2>{{ centers.selectedEvent.name }}</h2>
+        <h2 class="readtitle">{{ centers.selectedEvent.name }}</h2>
         <p>{{ centers.selectedEvent.content }}</p>
       </div>
     </div>
