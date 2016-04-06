@@ -27,6 +27,7 @@
 </div>
 <div class="row">
   <section ng-repeat="(key, center) in centers.all" class="col-md-6 school-container">
-    <a ui-sref="center({ id: center._id })" class="centername">{{ center.name }}</a>
+    <div class="shader"></div>
+      <a ui-sref="center({ id: center._id })" class="centername">{{ center.name }}</a>
   </section>
 </div>

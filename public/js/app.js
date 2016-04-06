@@ -1,5 +1,5 @@
 angular
-  .module('ChildrensCenters', ['ui.bootstrap', 'ngAnimate', 'simpleAngularTicker', 'ngResource', 'angular-jwt', 'ui.router'])
+  .module('ChildrensCenters', ['ui.bootstrap', 'ngAnimate', 'slick', 'ngResource', 'angular-jwt', 'ui.router'])
   .config(InterceptorConfig)
   .config(Router);
 
