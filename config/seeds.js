@@ -11,113 +11,112 @@ Event.collection.drop();
 Info.collection.drop();
 
 Event.create([{
-  name: "Child Development Work- shop linking to EYFS",
+  name: "Blooming Babies And Little Treasures",
   day: "Monday",
-  startTime: "09.30",
-  endTime: "12.00",
+  startTime: "10.30",
+  endTime: "11.45",
   timeOfDay: "AM",
-  venue: "South Bermondsey CC",
-  content: "Child Development",
+  venue: "Ellen Brown",
+  content: "Fun treasure baskets and heuristic play for Parents/Carers and babies 18 months and under.Come & explore.",
   image: "Kids playing"
 },{
-  name: "Introducing Solid Foods",
+  name: "Bookstart",
   day: "Monday",
+  startTime: "13.45",
+  endTime: "15.00",
+  timeOfDay: "PM",
+  venue: "Ellen Brown",
+  content: "Drop in session, play with puppets, share books, sing songs and stories. Children under 5 and Parents/Carers welcome. Term time only.",
+  image: "Kids eating solid food"
+},{
+  name: "Childcare NVQ Course",
+  day: "Tuesday",
+  startTime: "9.30",
+  endTime: "11.30",
+  timeOfDay: "AM",
+  venue: "Ellen Brown",
+  content: "A year long course beginning in September 2015 including work experience placements.(Enrolled Students only)(Term Time Only)",
+  image: "Kids cooking"
+},{
+  name: "Next steps Groups",
+  day: "Tuesday",
   startTime: "13.00",
   endTime: "15.00",
   timeOfDay: "PM",
-  venue: "Pilgrims` Way Children's Centre",
-  content: "Come and meet Jennie our Dietician, she can offer you help and practical advice in a group setting on how to start solid foods with your baby and provide you with helpful resources/recipes",
-  image: "Kids eating solid food"
+  venue: "Pilgrims’ Way Children’s Centre",
+  content: "Eight weeks course for parents with children who have been diagnosed with autism. Referral only. Begins 17 May (Crèche Settling Session) to 19 July 2016",
+  image: "Kids playing"
 },{
-  name: "Cook and Eat Course",
-  day: "Tuesday",
+  name: "Childminder’s Session",
+  day: "Wednesday",
+  startTime: "09.15",
+  endTime: "10.30",
+  timeOfDay: "AM",
+  venue: "Ellen Brown",
+  content: "A Stay and play session for childminders and prospective parents. (Registered Childminders only) First and third Wednesday of every month (Term Time Only)",
+  image: "Kids playing"
+},{
+  name: "Save a Baby’s Life",
+  day: "Wednesday",
+  startTime: "13.30",
+  endTime: "15.30",
+  timeOfDay: "PM",
+  venue: "Kintore Way",
+  content: "Learn emergency first aid for incidents such as choking and CPR. This course is for parents/carers of babies, toddlers and all children under 5 years. Call Kintore Way on 02075251196 1 June 2016",
+  image: "Cute kids eating"
+},{
+  name: "Parent/Carer & Baby/Toddler Group ",
+  day: "Thursday",
+  startTime: "09.15",
+  endTime: "10.45",
+  timeOfDay: "AM",
+  venue: "Ellen Brown",
+  content: "Come & play with your child and the team. Messy Play and lots of other fun activities to support your child’s learning. Five years and under.",
+  image: "Kids learning"
+},{
+  name: "Bumps and Babies",
+  day: "Thursday",
+  startTime: "13.15",
+  endTime: "14.45",
+  timeOfDay: "PM",
+  venue: "Pilgrims Way Chil- dren’s Centre",
+  content: "Relaxing sensory play session families, parents and pregnant women.(Babies 12 months and under)",
+  image: "Kids reading"
+},{
+  name: "Breastfeeding Support",
+  day: "Friday",
   startTime: "10.00",
   endTime: "12.00",
   timeOfDay: "AM",
-  venue: "Pilgrims` Way Children's Centre",
-  content: "A practical work- shop for parents to cook and eat",
-  image: "Kids cooking"
-},{
-  name: "Stay and Play",
-  day: "Tuesday",
-  startTime: "13.00",
-  endTime: "15.00",
-  timeOfDay: "PM",
-  venue: "Pilgrims’ Way Children’s Centre",
-  content: "Enjoy a Stay and Play ses- sion with opportunities for you and your child to plant grow and sow and play activ- ities for parents, carers, and child-minders with children aged 0-5years. Come and have fun with your little ones. All activities linking into the EYFS",
+  venue: "Kintore Way",
+  content: "For breastfeeding mothers who want advice and support in the early days of motherhood and beyond. Please feel free to bring your partner or a friend.",
   image: "Kids playing"
 },{
-  name: "Stay and Play",
-  day: "Wednesday",
-  startTime: "09.30",
-  endTime: "12.00",
-  timeOfDay: "AM",
-  venue: "South Bermondsey CC",
-  content: "Enjoy a Stay and Play session with opportunities to get creative and play activities for all parents, carers, and child-minders with children aged 0-5years. Come and have fun with your little ones. All activities linking into the EYFS",
-  image: "Kids playing"
-},{
-  name: "The Lunch Club",
-  day: "Wednesday",
-  startTime: "11.00",
-  endTime: "15.00",
-  timeOfDay: "PM",
-  venue: "Pilgrims` Way Children's Centre",
-  content: "A meet and greet session, for young parents with their babies and children, this is a great opportunity to meet new friends, enjoy lunch provided by the Children's Centre, and to access other professionals for advice/support.",
-  image: "Cute kids eating"
-},{
-  name: "Terrific Two’s Workshop",
-  day: "Thursday",
-  startTime: "09.30",
-  endTime: "12.00",
-  timeOfDay: "AM",
-  venue: "South Bermondsey CC",
-  content: "How your children learn through play, no booking.",
-  image: "Kids learning"
-},{
-  name: "Book Start",
-  day: "Thursday",
-  startTime: "13.30",
-  endTime: "15.00",
-  timeOfDay: "PM",
-  venue: "Pilgrims Way Chil- dren’s Centre",
-  content: "We think that books are a fundamental fun experience for both children and adults there- fore we are offering a Fun drop-in playgroup session for families. Interactive for both adult and child, learning new strategies' to help at home with being interested in books and stories.",
-  image: "Kids reading"
-},{
-  name: "Stay and Play",
-  day: "Friday",
-  startTime: "09.00",
-  endTime: "12.00",
-  timeOfDay: "AM",
-  venue: "Pilgrims’ Way Children’s Centre",
-  content: "Play activities forparents, carers, and child- minders with children aged 0- 5years. Come and have fun with your little ones. All activities linking into the EYFS",
-  image: "Kids playing"
-},{
-  name: "Stay and Play",
+  name: "Chatter time",
   day: "Friday",
   startTime: "13.30",
-  endTime: "15.00",
+  endTime: "14.45",
   timeOfDay: "PM",
-  venue: "South Bermondsey CC",
-  content: "Enjoy a Stay and Play session with opportunities to get creative and play activities for all parents, carers, and child-minders with children aged 0-5years. Come and have fun with your little ones.",
+  venue: "Ellen Brown",
+  content: "Fun plays activities focusing on developing children’s communication. Come and play with Kintore Way Children’s Centre and the Speech Therapy team. Five years and under. (Term time only)",
   image: "Kids playing"
 },{
-  name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
+  name: "FUDGE Breakfast",
   day: "Saturday",
-  startTime: "12.30",
-  endTime: "14.30",
+  startTime: "9.45",
+  endTime: "11.30",
   timeOfDay: "AM",
-  venue: "Pilgrims’ Way Children’s Centre",
-  content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
+  venue: "Kintore Way",
+  content: "Activities for fathers, uncles, dads and granddads to spend time with their children. 18 June 2016",
   image: "Kids playing with Dad's"
 },{
-  name: "Dads, Uncles, Granddads' Drop in Stay and Play Session",
+  name: "Kintore Way Community Evening ",
   day: "Saturday",
-  startTime: "12.30",
-  endTime: "14.30",
+  startTime: "16.30",
+  endTime: "18.30",
   timeOfDay: "PM",
-  venue: "Pilgrims’ Way Children’s Centre",
-  content: "Opportunity for Dads and male carer's to meet and join in with the Children centres activities. Group session open to all, with 0-5years children.",
-  image: "Kids playing with Dad's"
+  venue: "Kintore Way",
+  content: "A community event to celebrate the Queen's 90th  Birthday. Bring a dish of food to share which reflects your family, culture or traditions. Get to know Staff and your local community through an evening of food and fun filled activities. An event for the whole family. 9 June 2016 Cost: Free if you bring food to share or £1 per child and £2 per adult."
 }], function(err, events) {
   if(err) return console.error(err);
   var eventIds = events.map(function(event) {
