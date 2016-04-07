@@ -41,7 +41,7 @@
                 <div ng-repeat="event in events" ng-click="centers.selectEvent(event)" class="tablecell" id="{{event._id}}">
                   <h4>{{ event.name }}</h4>
                   <p class="pcell">{{ event.content }}</p>
-                  <a ng-click="centers.readMore(event)">Read More</a>
+                  <a ui-sref="event({ id: centers.currentCenter._id, eventId: event._id })">Read More</a>
                 </div>
               </div>
             </div>

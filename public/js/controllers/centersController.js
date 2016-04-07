@@ -35,8 +35,6 @@ function CentersController(Center, Event, $state, tokenService) {
 
       self.calendar = self.week;
 
-      console.log(self.currentCenter.name);
-
       self.slides = [
         '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '1.jpg',
         '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '2.jpg',
@@ -44,10 +42,10 @@ function CentersController(Center, Event, $state, tokenService) {
         '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '4.jpg'
       ];
     });
-  }
 
-  this.selectEvent = function(event) {
-    this.selectedEvent = event;
+    if($state.params.eventId) {
+      self.selectedEvent = Event.get({ id: $state.params.eventId });
+    }
   }
 
   this.addEvent = function(event) {

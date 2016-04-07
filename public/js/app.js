@@ -26,6 +26,11 @@ function Router($stateProvider, $urlRouterProvider){
     templateUrl: 'center.html',
     controller: 'centersController as centers'
   })
+  .state('event', {
+    url: '/center/:id/event/:eventId',
+    templateUrl: 'center.html',
+    controller: 'centersController as centers'
+  })
   .state('newEvent', {
     url: '/center/:id/newEvent',
     templateUrl: 'newEvent.html'

@@ -4,7 +4,6 @@ angular
 
 navBarController.$inject = ['Center'];
 function navBarController(Center) {
-  console.log("Loaded")
   var self = this;
 
   self.centers = Center.query();
