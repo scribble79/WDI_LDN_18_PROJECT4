@@ -40,6 +40,9 @@
                 <label>{{ timeOfDay }}</label>
                 <div ng-repeat="event in events" ng-click="centers.selectEvent(event)" class="tablecell" id="{{event._id}}">
                   <h4>{{ event.name }}</h4>
+                  <h5>{{ event.startTime }}</h5>
+                  <h5>{{ event.endTime }}</h5>
+                  <h5>{{ event.venue }}</h5>
                   <p class="pcell">{{ event.content }}</p>
                   <a ui-sref="event({ id: centers.currentCenter._id, eventId: event._id })">Read More</a>
                 </div>

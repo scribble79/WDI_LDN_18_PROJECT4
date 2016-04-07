@@ -3,7 +3,7 @@
 <div ng-controller="centersController as centers">
   <form ng-submit="centers.addEvent()" ng-if="admins.isLoggedIn()">
     <div class="form-group">
-      <label for="singleSelect">Day</label>
+      <label for="singleSelect"></label>
       <select name="day" ng-model="centers.newEvent.day" class="form-control">
         <option value="" disabled selected>Please choose a day</option>
         <option value="Monday">Monday</option>
@@ -15,7 +15,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="singleSelect">Time</label>
+      <label for="singleSelect"></label>
       <select name="time" ng-model="centers.newEvent.timeOfDay" class="form-control">
         <option value="" disabled selected>Please select time of day</option>
         <option value="AM">AM</option>
@@ -23,8 +23,16 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="name">Name</label>
       <input placeholder="Name" ng-model="centers.newEvent.name" class="form-control">
+    </div>
+    <div class="form-group">
+      <input placeholder="Start Time" ng-model="centers.newEvent.startTime" class="form-control">
+    </div>
+    <div class="form-group">
+      <input placeholder="End Time" ng-model="centers.newEvent.endTime" class="form-control">
+    </div>
+    <div class="form-group">
+      <input placeholder="Venue" ng-model="centers.newEvent.venue" class="form-control">
     </div>
     <div class="form-group">
       <textarea rows="10" ng-model="centers.newEvent.content" placeholder="Info" class="form-control"></textarea>
