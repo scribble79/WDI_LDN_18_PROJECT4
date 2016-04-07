@@ -18,7 +18,8 @@ function Router($stateProvider, $urlRouterProvider){
   })
   .state('info', {
     url: '/info',
-    templateUrl: 'info.html'
+    templateUrl: 'info.html',
+    controller: 'infosController as infos'
   })
   .state('center', {
     url: '/center/:id',

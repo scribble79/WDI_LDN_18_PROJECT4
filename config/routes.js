@@ -3,6 +3,7 @@ var jwt = require('jsonwebtoken');
 var adminsController = require('../controllers/admins');
 var centersController = require('../controllers/centers');
 var eventsController = require('../controllers/events');
+var infosController = require('../controllers/infos');
 var authenticationController = require('../controllers/authentication');
 var secret = require('../config/tokens').secret;
 
@@ -47,6 +48,16 @@ router.route('/events/:id')
   .get(eventsController.show)
   .put(secureRoute, eventsController.update)
   .delete(secureRoute, eventsController.delete);
+
+// info routes
+router.route('/infos')
+  .get(infosController.index)
+  .post(infosController.create);
+
+router.route('/infos/:id')
+  .get(infosController.show)
+  .put(secureRoute, infosController.update)
+  .delete(secureRoute, infosController.delete);
 
 router.post('/register', authenticationController.register);
 router.post('/login', authenticationController.login);

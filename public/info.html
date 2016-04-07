@@ -1,37 +1,62 @@
-<h3>Information For Families</h3>
+<section ng-controller="infosController as info">
+  <h3>Information For Families</h3>
 
-<div class="info">
-<p class="infotext">Southwark Local Authority is reorganising how Children’s Centre services are to be delivered across the borough.
+  <div class="form-group">
+    <p class="infotext">Southwark Local Authority is reorganising how Children’s Centre services are to be delivered across the borough.
 
-                            
 
-From 1st April 2016 there will be changes to the way the Children’s Centres in Bermondsey and Rotherhithe are led and managed.
 
- 
+      From 1st April 2016 there will be changes to the way the Children’s Centres in Bermondsey and Rotherhithe are led and managed.
 
-Pilgrims Way Primary School and Children’s Centre and Kintore Way Nursery School and Children’s Centre will be jointly leading the Children’s Centres in the Bermondsey and Rotherhithe locality. This includes Kintore Way Children’s Centre, South Bermondsey Children’s Centre, Pilgrim’s Way Children’s Centre and Rotherhithe Children’s Centre.
 
- 
 
-Our aim is to ensure children and their families are able to access high quality provision and support.
+      Pilgrims Way Primary School and Children’s Centre and Kintore Way Nursery School and Children’s Centre will be jointly leading the Children’s Centres in the Bermondsey and Rotherhithe locality. This includes Kintore Way Children’s Centre, South Bermondsey Children’s Centre, Pilgrim’s Way Children’s Centre and Rotherhithe Children’s Centre.
 
- 
 
-You may in the future begin to see some changes to the provision at the Children’s Centres in Bermondsey and Rotherhithe as we need to consult with families and staff how best we can respond to the needs of all families in the locality by providing services that are sustainable, consistent and effective.
 
-In the short term we will endeavour to continue to provide the programme outlined in the Let’s Go Guide but please check with Children Centre staff for more information.
-</p>
-</div>
+      Our aim is to ensure children and their families are able to access high quality provision and support.
 
-<h3>News</h3>
-<div class="news">
-<p class="infonews">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-<!-- <a ng-click="centers.readMore(event)">Read More</a> -->
-</div>
+
+
+      You may in the future begin to see some changes to the provision at the Children’s Centres in Bermondsey and Rotherhithe as we need to consult with families and staff how best we can respond to the needs of all families in the locality by providing services that are sustainable, consistent and effective.
+
+      In the short term we will endeavour to continue to provide the programme outlined in the Let’s Go Guide but please check with Children Centre staff for more information.
+    </p>
+  </div>
+
+  <!-- <div ng-show="infos.selectedInfo">
+    <form ng-submit="infos.saveInfo()" ng-if="admins.isLoggedIn()">
+      <div class="form-group">
+        <input ng-model="infos.selectedInfo.name" placeholder="Title" class="form-control">
+      </div>
+      <div class="form-group">
+        <textarea rows="10" ng-model="infos.selectedInfo.content" placeholder="Info" class="form-control"></textarea>
+      </div>
+      <button class="btn btn-primary">Save</button>
+    </form>
+    <button class="btn btn-primary" ng-click="infos.deleteInfo()" ng-if="admins.isLoggedIn()">Delete</button> -->
+
+    <h3>News</h3>
+    <div class="form-group">
+      <p class="infonews">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <!-- <a ng-click="infos.readMore(info)">Read More</a> -->
+    </div>
+    <div ng-show="infos.selectedInfo">
+      <form ng-submit="infos.saveInfo()" ng-if="admins.isLoggedIn()">
+        <div class="form-group">
+          <input ng-model="infos.selectedInfo.name" placeholder="Title" class="form-control">
+        </div>
+        <div class="form-group">
+          <textarea rows="10" ng-model="infos.selectedInfo.content" placeholder="Info" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-primary">Save</button>
+      </form>
+      <button class="btn btn-primary" ng-click="infos.deleteInfo()" ng-if="admins.isLoggedIn()">Delete</button>
+  </section>
