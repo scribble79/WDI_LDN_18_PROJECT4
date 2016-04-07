@@ -1,12 +1,14 @@
 var mongoose = require('mongoose');
 var Event = require('../models/event');
 var Center = require('../models/center');
+var Info = require('../models/info');
 var db = require('./database');
 
 mongoose.connect(db.uri);
 
 Center.collection.drop();
 Event.collection.drop();
+Info.collection.drop();
 
 Event.create([{
   name: "Child Development Work- shop linking to EYFS",
@@ -524,6 +526,13 @@ Event.create([{
   }], function(err, centers) {
     if(err) return console.error(err);
     console.log(centers);
-    mongoose.connection.close();
+    Info.create({
+      _id: 0,
+      content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    }, function(err, info) {
+      if (err) console.log(err);
+      console.log(info);
+      mongoose.connection.close();
+    });
   });
 });

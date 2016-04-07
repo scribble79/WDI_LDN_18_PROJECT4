@@ -50,14 +50,11 @@ router.route('/events/:id')
   .delete(secureRoute, eventsController.delete);
 
 // info routes
-router.route('/infos')
-  .get(infosController.index)
-  .post(infosController.create);
+router.route('/info')
+  .get(infosController.show);
 
-router.route('/infos/:id')
-  .get(infosController.show)
-  .put(secureRoute, infosController.update)
-  .delete(secureRoute, infosController.delete);
+router.route('/info/:id')
+  .put(secureRoute, infosController.update);
 
 router.post('/register', authenticationController.register);
 router.post('/login', authenticationController.login);

@@ -34,6 +34,15 @@ function CentersController(Center, Event, $state, tokenService) {
       });
 
       self.calendar = self.week;
+
+      console.log(self.currentCenter.name);
+
+      self.slides = [
+        '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '1.jpg',
+        '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '2.jpg',
+        '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '3.jpg',
+        '/images/' + self.currentCenter.name.toLowerCase().replace(' ', '') + '4.jpg'
+      ];
     });
   }
 

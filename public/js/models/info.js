@@ -4,7 +4,8 @@ angular
 
 Info.$inject = ['$resource'];
 function Info($resource) {
- return $resource('/infos/:id', { id: '@_id' }, {
-    update: { method: "PUT" },
+ return $resource('/info/:id', { id: '@_id' }, {
+    get: { method: "GET"},
+    update: { method: "PUT" }
   });
 }

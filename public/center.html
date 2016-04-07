@@ -1,46 +1,14 @@
 <div class="row">
   <section class="col-md-6 school-info">
-    
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
-      <!-- Indicators -->
+    <div style="height: 300px;">
+      
+      <uib-carousel active="active" interval="5000" style="height:300px;">
+        <uib-slide ng-repeat="slide in centers.slides track by $index" index="$index" style="height:300px;">
+          <img class="carousel-img" ng-src="{{slide}}">
+        </uib-slide>
+      </uib-carousel>
       <h2>{{ centers.currentCenter.name | uppercase }}</h2>
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="/images/kintoreway4.JPG" alt="school">
-        </div>
-
-        <div class="item">
-          <img src="/images/kintoreway2.JPG" alt="school">
-        </div>
-
-        <div class="item">
-          <img src="/images/kintoreway3.JPG" alt="school">
-        </div>
-
-        <div class="item">
-          <img src="/images/kintoreway1.JPG" alt="school">
-        </div>
-      </div>
-
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
-
   </section>
 
   <section class="col-md-6 school-info">
@@ -94,7 +62,7 @@
       </form>
       <button class="btn btn-primary" ng-click="centers.deleteEvent()" ng-if="admins.isLoggedIn()">Delete</button>
 
-      <div ng-if="!admins.isLoggedIn()">
+      <div class="form-group" ng-if="!admins.isLoggedIn()">
         <h2 class="readtitle">{{ centers.selectedEvent.name }}</h2>
         <p class="readtext">{{ centers.selectedEvent.content }}</p>
       </div>
