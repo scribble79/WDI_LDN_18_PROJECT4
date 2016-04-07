@@ -12,7 +12,6 @@ function AdminsController(Admin, tokenService, $state) {
   function handleLogin(res) {
     var token = res.token ? res.token : null;
     
-    // Console.log our response from the API
     if(token) {
       self.currentAdmin = tokenService.getAdmin();
     }
