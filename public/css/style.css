@@ -170,11 +170,18 @@ td {
 }
 
 .table-block {
-  height: 550px;
+  height: 450px;
 }
 
 .pcell {
   text-align: left;
+  text-overflow: ellipsis;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    /* for good looks */
+    padding: 10px;
 }
 
 .readtitle {
@@ -186,6 +193,13 @@ td {
   font-size: 20px;
 }
 
+h2 {
+  padding: 10px;
+}
+
+/*h5 {
+  padding: 5px;
+}*/
 /*---- GOOGLE MAP ----*/
 
 .google-map {

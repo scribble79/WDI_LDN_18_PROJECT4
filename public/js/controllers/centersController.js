@@ -49,7 +49,6 @@ function CentersController(Center, Event, $state, tokenService) {
   }
 
   this.addEvent = function(event) {
-    console.log(event);
     this.newEvent.center = this.currentCenter._id;
     Event.save(this.newEvent, function(res){
       self.newEvent = null
