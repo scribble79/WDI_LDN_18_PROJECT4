@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/scribble79/WDI_LDN_18_PROJECT4#readme",
   "dependencies": {
+    "angular-jwt": "0.0.9",
     "angular-resource": "^1.5.3",
     "bcrypt": "^0.8.5",
     "body-parser": "^1.15.0",
